@@ -5,15 +5,15 @@
 // 3267900 -> 6
 
 Console.Write("Введите число: ");
-string number = Console.ReadLine();
-int x = number.Length;
-if (x<3)
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number / 100 == 0)
 {
   Console.WriteLine("Третьей цифры нет");
 }
 else
 {
-  Console.WriteLine($"Третья цифра {number} равна {number[2]}");
+  Console.WriteLine($"Третья цифра семизначного числа {number} равна {number % 100000 / 10000}");
   Console.WriteLine("ДОП:");
-  Console.WriteLine($"Третья цифра справа числа {number} равна {(Convert.ToInt32(number)%1000)/100}");
+  Console.WriteLine($"Третья цифра справа числа {number} равна {number % 1000 / 100}");
 }
